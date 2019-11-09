@@ -26,7 +26,9 @@ FOR UBUNTU
 1- Install OpenCV for ubuntu: 
 
 ´´´
+
 sudo apt-get install libopencv-dev
+
 ´´´
 
 2- Do a fork and clone the repository [**"webcam_capture"**](https://github.com/esdalar/webcam_capture)
@@ -34,13 +36,16 @@ sudo apt-get install libopencv-dev
 3- Install CMake:
 
 ´´´
+
 sudo apt-get install cmake
+
 ´´´
 
 
 4- Create the project "build" inside the "webcam_capture" folder:
 
 ´´´
+
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ mkdir build
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ cd build
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ cmake ..
@@ -57,3 +62,24 @@ gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/we
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found OpenCV: /usr (found version "3.2.0") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/gengiro/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build
+gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ make
+Scanning dependencies of target webcam_capture
+[ 50%] Building CXX object CMakeFiles/webcam_capture.dir/src/webcam_capture.cpp.o
+[100%] Linking CXX executable webcam_capture
+[100%] Built target webcam_capture
+
+´´´
+
+5- Execute the camera:
+
+´´´
+
+gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ ./webcam_capture
+Opening video device 0
+
+´´´
