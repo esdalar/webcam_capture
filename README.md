@@ -2,6 +2,8 @@
 
 **CMake**
 
+FOR WINDOWS
+
 1- Download and install OpenCV for windows -I am still installing Ubuntu- [OpenCV for Windows](https://docs.opencv.org/master/d3/d52/tutorial_windows_install.html)
 
 2- Do a fork and clone the repository [**"webcam_capture"**](https://github.com/esdalar/webcam_capture)
@@ -17,23 +19,28 @@
 
 6- Go to the folder "build\Debug" and it should find the executable of the program that can be run with the "cmd".
 
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica$ git clone https://github.com/esdalar/webcam_capture.git
-Cloning into 'webcam_capture'...
-remote: Enumerating objects: 3, done.
-remote: Counting objects: 100% (3/3), done.
-remote: Compressing objects: 100% (3/3), done.
-remote: Total 65 (delta 0), reused 2 (delta 0), pack-reused 62
-Unpacking objects: 100% (65/65), done.
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica$ cd /webcam_capture
-bash: cd: /webcam_capture: No such file or directory
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica$ cd webcam_capture
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ git show  cmakelists
-fatal: ambiguous argument 'cmakelists': unknown revision or path not in the working tree.
-Use '--' to separate paths from revisions, like this:
-'git <command> [<revision>...] -- [<file>...]'
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ cd  cmakelists
-bash: cd: cmakelists: No such file or directory
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ git show CMakeLists.txt
+
+FOR UBUNTU
+
+
+1- Install OpenCV for ubuntu: 
+
+´´´
+sudo apt-get install libopencv-dev
+´´´
+
+2- Do a fork and clone the repository [**"webcam_capture"**](https://github.com/esdalar/webcam_capture)
+
+3- Install CMake:
+
+´´´
+sudo apt-get install cmake
+´´´
+
+
+4- Create the project "build" inside the "webcam_capture" folder:
+
+´´´
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ mkdir build
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture$ cd build
 gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ cmake ..
@@ -50,15 +57,3 @@ gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/we
 -- Detecting CXX compiler ABI info
 -- Detecting CXX compiler ABI info - done
 -- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Found OpenCV: /usr (found version "3.2.0") 
--- Configuring done
--- Generating done
--- Build files have been written to: /home/gengiro/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ make
-Scanning dependencies of target webcam_capture
-[ 50%] Building CXX object CMakeFiles/webcam_capture.dir/src/webcam_capture.cpp.o
-[100%] Linking CXX executable webcam_capture
-[100%] Built target webcam_capture
-gengiro@gengiro-GL552VW:~/Desktop/Master Robotica/GitHub/Integracion robotica/webcam_capture/build$ ./webcam_capture
-Opening video device 0
